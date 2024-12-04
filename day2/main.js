@@ -22,11 +22,8 @@ function solve1(file) {
         break;
       }
 
-      if (arrOfNumbers[i][j] < arrOfNumbers[i][j + 1]) {
-        isDecreas = false;
-      } else if (arrOfNumbers[i][j] > arrOfNumbers[i][j + 1]) {
-        isIncreas = false;
-      }
+      if (arrOfNumbers[i][j] < arrOfNumbers[i][j + 1]) isDecreas = false;
+      if (arrOfNumbers[i][j] > arrOfNumbers[i][j + 1]) isIncreas = false;
     }
 
     if ((isIncreas || isDecreas) && safeReport) {
@@ -39,3 +36,5 @@ function solve1(file) {
 
 const result1 = solve1("./day2/text.txt");
 console.log(result1);
+
+//------------------------------ Part 2---------------------------------------------//
